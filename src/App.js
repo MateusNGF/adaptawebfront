@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { Button, Container, Form, Row, Spinner, Alert } from 'react-bootstrap';
-import {classificationTriangles} from './api/api'
+import {classificationTriangles} from './api/triangleService'
 import { toast } from 'react-toastify';
 
 
