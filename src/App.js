@@ -20,9 +20,9 @@ function App() {
     try {
 
       const response = await classificationTriangles(
-        form.ladoA.value,
-        form.ladoB.value,
-        form.ladoC.value
+        form.sideA.value,
+        form.sideB.value,
+        form.sideC.value
       )
 
       if (!response.classification){
@@ -44,19 +44,22 @@ function App() {
         Classificador de triângulos
       </h1>
       <Alert variant="info" hidden={classification === null}>
-         O triangulo é {classification?.classification} e os angulos são <br/>cosA = {classification?.angles.cosA};<br/> cosB = {classification?.angles.cosB}<br/> cosC = {classification?.angles.cosC}<br/>
+         O triangulo é {classification?.classification} e os angulos são 
+         <br/>cosA = {classification?.angles.cosA};
+         <br/> cosB = {classification?.angles.cosB}
+         <br/> cosC = {classification?.angles.cosC}
       </Alert>
       <Form onSubmit={handleSubmit}>
         <Row>
-          <Form.Group className="mb-3" controlId="ladoA" >
+          <Form.Group className="mb-3" controlId="sideA" >
             <Form.Label>Tamanho Lado A</Form.Label>
             <Form.Control type="number" placeholder="Insira a medida do lado A" min={1} required />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="ladoB" required>
+          <Form.Group className="mb-3" controlId="sideB" required>
             <Form.Label>Tamanho Lado B</Form.Label>
             <Form.Control type="number" placeholder="Insira a medida do Lado B" min={1} required />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="ladoC" required>
+          <Form.Group className="mb-3" controlId="sideC" required>
             <Form.Label>Tamanho Lado C</Form.Label>
             <Form.Control type="number" placeholder="Insira a medida do lado C" min={1} required />
           </Form.Group>
