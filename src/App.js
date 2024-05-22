@@ -25,7 +25,7 @@ function App() {
         form.sideC.value
       )
 
-      if (!response.classification){
+      if (!response.type){
         toast.error("Não foi possivel classificar esse triangulo")
       } else {
         setClassification(response)
@@ -44,10 +44,10 @@ function App() {
         Classificador de triângulos
       </h1>
       <Alert variant="info" hidden={classification === null}>
-         O triangulo é {classification?.classification} e os angulos são 
+         O triangulo é {classification?.type} e os angulos são 
          <br/>cosA = {classification?.angles.cosA};
-         <br/> cosB = {classification?.angles.cosB}
-         <br/> cosC = {classification?.angles.cosC}
+         <br/>cosB = {classification?.angles.cosB}
+         <br/>cosC = {classification?.angles.cosC}
       </Alert>
       <Form onSubmit={handleSubmit}>
         <Row>

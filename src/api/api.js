@@ -15,7 +15,6 @@ async function classificationTriangles(ladoA, ladoB, ladoC) {
     }
 }
 
-
 export  {
     classificationTriangles
 }
